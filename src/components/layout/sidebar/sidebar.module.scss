@@ -1,0 +1,46 @@
+.sidebar {
+	@apply transition-all flex flex-col gap-4 border-r-2 text-grey_basic border-[#DBDBDB] font-medium w-[5rem] duration-500;
+	.logo {
+		@apply h-[88px] border-b-2 gap-3 flex items-center pl-5 ;
+		> span {
+			@apply w-0 opacity-0 text-black -left-5 relative transition-all duration-300;
+		}
+	}
+	.menu {
+		@apply flex flex-col gap-2 transition-all duration-500 pl-3 pr-1;
+		> li {
+			> a {
+				@apply gap-0 py-2 px-3 flex items-center hover:text-black hover:bg-purple_basic hover:bg-opacity-10 rounded-md transition-all;
+				.icon {
+					@apply transition-all duration-300 bg-white min-w-[26px] min-h-[26px] relative z-[2];
+				}
+				> span {
+					@apply w-0 relative z-[1] -left-5 invisible opacity-0 transition-all duration-300;
+				}
+			}
+		}
+	}
+	&:hover {
+		@apply w-[16rem];
+		.logo {
+			> span {
+				@apply w-auto opacity-100 left-0;
+			}
+		}
+		.menu {
+			> li {
+				> a {
+					@apply gap-3;
+					> span {
+						@apply w-auto visible opacity-100 left-0;
+					}
+					&:hover {
+						.icon {
+							@apply bg-transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
