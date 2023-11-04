@@ -10,7 +10,7 @@
 		@apply flex flex-col gap-2 transition-all duration-500 pl-3 pr-1;
 		> li {
 			> a {
-				@apply gap-0 py-2 px-3 flex items-center hover:text-black hover:bg-purple_basic hover:bg-opacity-10 rounded-md transition-all;
+				@apply gap-0 py-2 px-3 flex items-center hover:bg-purple_basic hover:bg-opacity-10 rounded-md transition-all duration-300;
 				.icon {
 					@apply transition-all duration-300 bg-white min-w-[26px] min-h-[26px] relative z-[2];
 				}
@@ -36,7 +36,7 @@
 					}
 					&:hover {
 						.icon {
-							@apply bg-transparent;
+							@apply bg-purple_basic bg-opacity-[.01];
 						}
 					}
 				}
