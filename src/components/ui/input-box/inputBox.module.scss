@@ -1,0 +1,6 @@
+.inputBox{
+    @apply w-full relative flex items-center;
+    >input{
+        @apply outline-none border-purple_basic border-2 w-full rounded-lg p-2;
+    }
+}
